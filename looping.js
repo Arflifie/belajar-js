@@ -8,7 +8,7 @@
 //     }
 // }
 
-//FOR
+//==FOR==
 // const student = [
 //     ['robi', 'lani', 'budi'],
 //     ['yaya', 'yudo', 'tega'],
@@ -23,7 +23,7 @@
 //     }
 // }
 
-//WHILE
+//==WHILE==
 // let num = 0;
 // while(num < 10){
 //     console.log(num);
@@ -40,7 +40,7 @@
 // }
 // alert('password benar');
 
-//break
+//==BREAK==
 // let input = prompt('ketikkan sesuatu');
 
 // while(true){
@@ -55,7 +55,37 @@
 //     console.log(i);
 // }
 
+//==FOR OF==
+// let namaBuah = ['pisang', 'durian', 'nanas', 'nangka'];
 
+// for (let buah of namaBuah ){
+//     console.log(`ini adalah buah ${buah}`);
+// }
+
+// const listStudent = [
+//     ['robi', 'lani', 'budi'],
+//     ['yaya', 'yudo', 'tega'],
+//     ['joko', 'dana', 'gina']
+// ];
+
+// for (let row of listStudent){
+//     for (let student of row){
+//         console.log(`${listStudent} adalah siswa bernama :  ${student}`);
+//     }
+// }
+
+
+//==FOR IN==
+// let nilaiSiswa = {
+//     Lani : 19,
+//     Doni : 25,
+//     Toni : 30,
+//     Sigit : 12
+// };
+
+// for (let siswa in nilaiSiswa){
+//     console.log(`${siswa} memiliki nilai ${nilaiSiswa[siswa]}`);
+// }
 
 
 
