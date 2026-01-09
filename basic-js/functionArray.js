@@ -108,3 +108,18 @@ const isFail = examScores.every(score => score < 80);
 //some akan mengembalikan nilai true jika ada minimal satu elemen yang memenuhi kondisi
 const hasHighScore = examScores.some(score => score >= 90);
 const hasAverage = examScores.some(score => score >= 80 && score <= 90);
+
+//reduce method
+//reduce akan mengembalikan satu nilai berdasarkan akumulasi dari setiap elemen dalam array
+//atau bisa juga untuk mencari nilai maksimum/minimum dalam array
+const total = examScores.reduce((total, score) => {
+    return total + score;
+});
+
+const bestAnime = animes.reduce((bestAnime, currentAnime) => {
+    console.log(bestAnime, currentAnime);
+    if(currentAnime.rating > bestAnime.rating){
+        return currentAnime;
+    }
+    return bestAnime;
+})
