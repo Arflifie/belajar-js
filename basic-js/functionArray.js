@@ -97,3 +97,14 @@ const judulAnimeBagus = animeRatingBagus.map((anime) => anime.judul);
 
 //versi gabungan
 // const animeRatingBagus = animes.filter(anime => anime.rating >= 8.0).map(anime => anime.judul);
+
+//every method dan some method
+
+//every akan mengembalikan nilai true jika semua elemen memenuhi kondisi
+const examScores = [70, 85, 90, 95, 80];
+const isPass = examScores.every(score => score >= 60); 
+const isFail = examScores.every(score => score < 80); 
+
+//some akan mengembalikan nilai true jika ada minimal satu elemen yang memenuhi kondisi
+const hasHighScore = examScores.some(score => score >= 90);
+const hasAverage = examScores.some(score => score >= 80 && score <= 90);
