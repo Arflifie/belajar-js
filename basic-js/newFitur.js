@@ -47,6 +47,7 @@ const jurusan = {
     jurusan: 'Sistem Informasi',
     universitas: 'Universitas Indonesia'
 };
+
 const dataSiswa = {...siswa1, ...jurusan};
 console.log(dataSiswa);
 //jika ada properti yang sama pada kedua object, maka properti dari object kedua akan menimpa properti dari object pertama
