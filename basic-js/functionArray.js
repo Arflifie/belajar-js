@@ -102,8 +102,8 @@ const judulAnimeBagus = animeRatingBagus.map((anime) => anime.judul);
 
 //every akan mengembalikan nilai true jika semua elemen memenuhi kondisi
 const examScores = [70, 85, 90, 95, 80];
-const isPass = examScores.every(score => score >= 60); 
-const isFail = examScores.every(score => score < 80); 
+const isPass = examScores.every(score => score >= 60);
+const isFail = examScores.every(score => score < 80);
 
 //some akan mengembalikan nilai true jika ada minimal satu elemen yang memenuhi kondisi
 const hasHighScore = examScores.some(score => score >= 90);
@@ -118,8 +118,24 @@ const total = examScores.reduce((total, score) => {
 
 const bestAnime = animes.reduce((bestAnime, currentAnime) => {
     console.log(bestAnime, currentAnime);
-    if(currentAnime.rating > bestAnime.rating){
+    if (currentAnime.rating > bestAnime.rating) {
         return currentAnime;
     }
     return bestAnime;
-})
+});
+
+//Object This
+const orang = {
+    nama: 'Arfun',
+    umur: new Date().getFullYear() - 2005,
+    sapa: function () {
+        console.log(`halo nama saya ${this.nama}, umur saya ${this.umur} tahun`);
+    },
+    sapa2: () => {
+        console.log(`halo nama saya ${this.nama}, umur saya ${this.umur} tahun`);
+        // this pada arrow function tidak merujuk pada object orang melainkan pada konteks di mana fungsi tersebut dibuat, 
+        // yaitu konteks global atau window object
+    }
+}
+orang.sapa();
+
