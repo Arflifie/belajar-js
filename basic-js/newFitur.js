@@ -51,3 +51,71 @@ const jurusan = {
 const dataSiswa = {...siswa1, ...jurusan};
 console.log(dataSiswa);
 //jika ada properti yang sama pada kedua object, maka properti dari object kedua akan menimpa properti dari object pertama
+
+//5. Rest Parameter
+const namaSiswa = ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'];
+
+const pemenang = (satu, dua, tiga, ...sisa) => {
+    console.log(`Juara 1 adalah ${satu}`)
+    console.log(`Juara 2 adalah ${dua}`)
+    console.log(`Juara 3 adalah ${tiga}`)
+    console.log(`Peserta lain: ${sisa}`)
+}
+
+pemenang(...namaSiswa);
+//rest parameter (...) akan mengumpulkan sisa argumen menjadi sebuah array
+//rest parameter harus diletakkan di urutan terakhir pada daftar parameter fungsi
+
+//6. Destructuring Function Parameter
+const [gold, silver, bronze, ...pesertaLain] = namaSiswa;
+console.log(gold);
+console.log(silver);
+console.log(bronze);
+console.log(pesertaLain);
+//dengan destructuring, kita bisa langsung mengambil nilai dari array atau object saat mendefinisikan parameter fungsi  
+
+//7. Destructuring Object Function Parameter
+const dataMahasiswa = {
+    name: 'Fajar',
+    age: 22,
+    major: 'Teknik Elektro'
+};
+
+const {name: namaSaya, age, major, fakultas = 'Belum diInputkan'} = dataMahasiswa;
+console.log(namaSaya);
+console.log(age);
+console.log(major);
+console.log(fakultas);
+//kita bisa memberikan nama baru pada variabel hasil destructuring dengan sintaks name: namaBaru
+//kita juga bisa memberikan default value pada properti yang mungkin tidak ada dalam object
+
+//8. Destructuring Function Parameter dalam Fungsi
+const animes = [{
+    judul: 'Naruto',
+    episode: 220,
+    rating: 8.5
+}, {
+    judul: 'One Piece',
+    episode: 1000,
+    rating: 9.0
+}, {
+    judul: 'Bleach',
+    episode: 366,
+    rating: 7.5
+}, {
+    judul: 'Dragon Ball',
+    episode: 153,
+    rating: 8.0
+}, {
+    judul: 'Attack on Titan',
+    episode: 75,
+    rating: 9.5
+}];
+
+const anime = animes.map(({judul, episode, rating}) => {
+    return `${judul} dengan total episode ${episode} memiliki rating ${rating}`;
+});
+
+console.log(anime);
+//dalam parameter fungsi, kita bisa langsung melakukan destructuring pada object yang diterima sebagai argumen
+//sehingga kita bisa langsung mengakses properti-properti dari object tersebut tanpa harus menulis nama objectnya lagi
