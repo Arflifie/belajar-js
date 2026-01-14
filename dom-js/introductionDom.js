@@ -35,4 +35,40 @@ const semuaParagrafKucing2 = document.querySelectorAll('img:nth-child(2)');
 // sedangkan querySelector memungkinkan untuk memilih menggunakan selektor CSS yang lebih kompleks.
 
 //4. InnerHTML, InnerText, TextContent
+const judul = document.querySelector('p');
 
+judul.innerHTML; // diambil dari penulisan di HTML termasuk tag HTML, spasi, dan baris di dalamnya
+judul.innerText; // diambil dari penulisan di HTML tapi tanpa spasi dan baris
+judul.textContent; //diambil dari penulisan di HTML termasuk spasi dan baris di dalamnya tapi tanpa tag HTML
+
+//5. Atribut Element
+let kucingIMG = document.querySelector('.gambar');
+
+kucingIMG.attributes; // menampilkan semua atribut yang ada pada element tersebut
+kucingIMG.setAttribute('id', 'kucing'); // menambahkan atribut baru pada element
+kucingIMG.getAttribute('id'); // mendapatkan nilai dari atribut yang diinginkan
+
+//Styling Element
+const heading = document.querySelector('h1');
+heading.style.color = '';
+// Saat ingin styling menggunakan JavaScript, properti CSS yang memiliki tanda strip (-) diubah menjadi camelCase
+
+//6. Memanfaatkan ClassList
+heading.classList.add('background') // menambahkan class baru pada element
+
+//classList yang bisa digunakan : add, remove, item, toggle, contains
+//add : menambahkan class baru pada element
+//remove : menghapus class pada element
+//item : mendapatkan class pada index tertentu
+//toggle : menambahkan class jika class belum ada, menghapus class jika class sudah ada
+//contains : mengecek apakah suatu element memiliki class tertentu atau tidak, mengembalikan nilai true atau false
+
+//7. Element Parent, Child, Sibling
+const text = document.querySelector('p');
+text.parentElement; // mendapatkan element parent dari element yang dipilih
+text.childNodes; // mendapatkan semua element child dari element yang dipilih
+text.children; // mendapatkan semua element child yang berupa element (tidak termasuk text node)
+text.firstElementChild; // mendapatkan element child pertama dari element yang dipilih
+text.lastElementChild; // mendapatkan element child terakhir dari element yang dipilih
+text.nextElementSibling; // mendapatkan element sibling setelah element yang dipilih
+text.previousElementSibling; // mendapatkan element sibling sebelum element yang dipilih    
