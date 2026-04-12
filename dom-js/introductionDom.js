@@ -72,3 +72,25 @@ text.firstElementChild; // mendapatkan element child pertama dari element yang d
 text.lastElementChild; // mendapatkan element child terakhir dari element yang dipilih
 text.nextElementSibling; // mendapatkan element sibling setelah element yang dipilih
 text.previousElementSibling; // mendapatkan element sibling sebelum element yang dipilih    
+
+text.nextSibling; // mendapatkan node sibling setelah element yang dipilih (termasuk text node)
+text.previousSibling; // mendapatkan node sibling sebelum element yang dipilih (termasuk text node)
+
+// Append & AppendChild
+const h2 = document.createElement('h2');
+h2.append('halo saya adalah h2'); // menambahkan text pada element h1
+document.body.append(h2); // menambahkan element h1 ke dalam body
+
+// append bisa untuk menambahkan element maupun text
+
+h1 = document.querySelector('h1');
+h1.insertAdjacentElement('beforebegin', h2); //beforebegin : menambahkan element sebelum element yang dipilih
+h1.insertAdjacentElement('afterbegin', h2); //afterbegin : menambahkan element setelah tag pembuka element yang dipilih
+h1.insertAdjacentElement('afterend', h2); //afterend : menambahkan element setelah tag penutup element yang dipilih
+h1.insertAdjacentElement('beforeend', h2); //beforeend : menambahkan element sebelum tag penutup element yang dipilih
+
+const newImg = document.createElement('img');
+newImg.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhMSEhIVFRUXFRUVFRUVFRAVFRUVFRUWFhUSFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGC0dHx0tLS0rLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstKystLS0tN//AABEIALcBFAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAIDBQYBBwj/xAA4EAABAwMCAwUGBAYDAQAAAAABAAIDBBEhBTESQVEGEyJhcTKBkaGx8CNSwdEHFDNCYuEVcvGS/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAIhEAAgICAgIDAQEAAAAAAAAAAAECEQMhEjETQQQiUWEy/9oADAMBAAIRAxEAPwDyiJuUQWLkDfEijGptnWkRiPZGvFgFG1iOliwLoonmXQO03XQxSCEKdkaBCiKNiJjanCJPaw9FrBRLGxExxqBhPRTMlPRNYKCGxqRsShZUeSmbU+SNgoeIk4RJoqvJPFUOhRs1C7pV+rx+FWP80OhVfq1QC2y1mS2UNEzxqapbkeo+q7RN8alq/wBR9VBvZ6mNfQ1c8d4m+i7QsuCi+7/Cb6BP06HdWXZxS/yzunx5XKyP8VvojaJmU2sj/Fb6K0+jixdk1HHhHNYo6JmEaI1zM7RvBhPpGZKkDE+lbkp49iseGp4apQxODFdE2DlqeGKQsUjWIgIwxSsjUjWKVjEGz";
+document.body.appendChild(newImg); // menambahkan element img ke dalam element h1
+
+// appendChild hanya bisa menambahkan element, tidak bisa menambahkan text
