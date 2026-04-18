@@ -76,7 +76,7 @@ text.previousElementSibling; // mendapatkan element sibling sebelum element yang
 text.nextSibling; // mendapatkan node sibling setelah element yang dipilih (termasuk text node)
 text.previousSibling; // mendapatkan node sibling sebelum element yang dipilih (termasuk text node)
 
-// Append & AppendChild
+// 8. Append & AppendChild
 const h2 = document.createElement('h2');
 h2.append('halo saya adalah h2'); // menambahkan text pada element h1
 document.body.append(h2); // menambahkan element h1 ke dalam body
@@ -94,3 +94,11 @@ newImg.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhM
 document.body.appendChild(newImg); // menambahkan element img ke dalam element h1
 
 // appendChild hanya bisa menambahkan element, tidak bisa menambahkan text
+
+//9. removeChild & remove 
+paragraf = document.querySelector('p');
+paragraf.parentElement.removeChild(); // menghapus element p dari element parentnya
+// removeChild hanya bisa menghapus element, tidak bisa menghapus text
+
+paragraf.remove(); // menghapus element p dari element parentnya
+// remove bisa menghapus element maupun text
